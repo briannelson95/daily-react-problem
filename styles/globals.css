@@ -85,7 +85,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   color: rbg(--foreground-rgb);
   background: linear-gradient(
       to bottom,
@@ -93,15 +93,46 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+} */
+
+.container {
+  margin: 0 2rem;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list:first-child {
+  border-right: 1px solid black;
+}
+
+.listItems {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.form {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+}
+
